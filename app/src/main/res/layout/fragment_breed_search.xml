@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <Button
+        android:id="@+id/dogBreedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Breed"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/breedSearchButton"
+        app:layout_constraintTop_toBottomOf="@id/dogBreedEditText" />
+
+
+    <Button
+        android:id="@+id/breedSearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:text="Search By Breed"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/dogBreedButton"
+        app:layout_constraintTop_toBottomOf="@id/dogBreedEditText" />
+
+    <EditText
+        android:id="@+id/dogBreedEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20sp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:hint="Type in the breed you want to search"
+        app:layout_constraintBottom_toTopOf="@id/dogBreedButton"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dogBreedImage" />
+
+    <ImageView
+        android:id="@+id/dogBreedImage"
+        android:layout_width="match_parent"
+        android:layout_height="533dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@id/dogBreedEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

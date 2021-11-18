@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dog_nav"
+    app:startDestination="@id/searchSelectFragment">
+
+    <fragment
+        android:id="@+id/searchSelectFragment"
+        android:name="com.caren.dogpictures.fragments.SearchSelectFragment"
+        android:label="search_select_fragment"
+        tools:layout="@layout/fragment_select_search" >
+        <action
+            android:id="@+id/action_searchSelectFragment_to_breedSearchFragment"
+            app:destination="@id/breedSearchFragment" />
+        <action
+            android:id="@+id/action_searchSelectFragment_to_randomDogFragment"
+            app:destination="@id/randomDogFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/breedSearchFragment"
+        android:name="com.caren.dogpictures.fragments.BreedSearchFragment"
+        android:label="breed_search_fragment"
+        tools:layout="@layout/fragment_breed_search" >
+        <action
+            android:id="@+id/action_breedSearchFragment_to_searchSelectFragment"
+            app:destination="@id/searchSelectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/randomDogFragment"
+        android:name="com.caren.dogpictures.fragments.RandomDogFragment"
+        android:label="EditTodoFragment" >
+        <action
+            android:id="@+id/action_randomDogFragment_to_searchSelectFragment"
+            app:destination="@id/searchSelectFragment" />
+    </fragment>
+
+</navigation>
